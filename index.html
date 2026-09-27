@@ -54,6 +54,7 @@
     position:fixed; inset:0; z-index:-3;
     background:#eaf3f2;
     transition:background-color .15s linear;
+    pointer-events:none;
   }
   #light-rays{
     position:fixed; inset:0; z-index:-2; pointer-events:none;
@@ -108,7 +109,7 @@
   }
 
   /* ---------- layout ---------- */
-  main{ position:relative; z-index:1; }
+  main{ position:relative; z-index:1; width:100%; overflow-x:clip; }
   .dive-section{
     min-height:auto;
     display:flex; flex-direction:column;
@@ -131,10 +132,8 @@
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
     text-align:center;
-    opacity:0; transform:translateY(28px);
-    transition:opacity .9s ease, transform .9s ease;
+    opacity:1; transform:none;
   }
-  .glass-card.in-view{ opacity:1; transform:translateY(0); }
 
   .eyebrow{
     font-family:'Cormorant Garamond', serif;
