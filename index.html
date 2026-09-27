@@ -190,7 +190,6 @@
     aspect-ratio:3/4;
     opacity:0; animation:fadeUp 1.2s .9s ease forwards;
     position:relative;
-    cursor:pointer;
   }
   .hero-photo{
     width:100%; height:100%; object-fit:cover; display:block;
@@ -981,14 +980,6 @@
       modal.classList.add('show');
     });
   });
-
-  var heroFrame = document.getElementById('heroPhotoFrame');
-  if(heroFrame){
-    heroFrame.addEventListener('click', function(){
-      showGalleryImage(0);
-      modal.classList.add('show');
-    });
-  }
 
   function closeModal(){ if(modal) modal.classList.remove('show'); }
   if(modalClose) modalClose.addEventListener('click', closeModal);
